@@ -1,6 +1,7 @@
 ﻿using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
+using MaraBis.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,14 @@ using System.Threading.Tasks;
 
 namespace MaraBis
 {
+    /// <summary>
+    /* idée en vrac:
+     * rgb to hexa
+     * ascii char
+     * crypter un message
+     * générer un ssh      
+    */
+    /// </summary>
     public class DiscordInfos
     {
         public DiscordSocketClient Client { get; private set; }
@@ -22,44 +31,19 @@ namespace MaraBis
             return Task.CompletedTask;
         }
 
-        public async Task InstallCommandsAsync()
-        {
-            Client.MessageReceived += HandleCommandAsync;
-            await Commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(),
-                                            services: null);
-        }
-
-        private async Task HandleCommandAsync(SocketMessage messageParam)
-        {
-            var message = messageParam as SocketUserMessage;
-            if (message == null) return;
-
-            int argPos = 0;
-
-            if (!(message.HasCharPrefix('!', ref argPos) ||
-                message.HasMentionPrefix(Client.CurrentUser, ref argPos)) ||
-                message.Author.IsBot)
-                return;            
-
-            var context = new SocketCommandContext(Client, message);
-
-            await Commands.ExecuteAsync(
-                context: context,
-                argPos: argPos,
-                services: null);
-        }
-
         public async Task RunBot() 
-        {
-            Client = new DiscordSocketClient();
+        {          
 
             Commands = new CommandService();
 
             Config = new DiscordSocketConfig()
             {
-
-                GatewayIntents = GatewayIntents.Guilds | GatewayIntents.GuildMessages | GatewayIntents.GuildMembers
+                GatewayIntents = GatewayIntents.Guilds | GatewayIntents.GuildMessages | GatewayIntents.GuildMembers | GatewayIntents.GuildPresences
             };
+
+            Client = new DiscordSocketClient(Config);
+
+            var cmdHandler = new CommandHandler(Client, Commands);
 
             Client.Log += Log;
 
@@ -69,7 +53,7 @@ namespace MaraBis
                 return Task.CompletedTask;
             };
 
-            await InstallCommandsAsync();
+            await cmdHandler.InstallCommandsAsync();            
 
             await Client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("DiscordToken", EnvironmentVariableTarget.User));
 

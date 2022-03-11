@@ -501,23 +501,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Devops01\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Kawas\\.nuget\\packages\\": {},
+    "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Devops C#\\MaraBis\\MaraBis.csproj",
+      "projectUniqueName": "H:\\Discord C#\\MaraBis\\MaraBis.csproj",
       "projectName": "MaraBis",
-      "projectPath": "C:\\Devops C#\\MaraBis\\MaraBis.csproj",
-      "packagesPath": "C:\\Users\\Devops01\\.nuget\\packages\\",
-      "outputPath": "C:\\Devops C#\\MaraBis\\obj\\",
+      "projectPath": "H:\\Discord C#\\MaraBis\\MaraBis.csproj",
+      "packagesPath": "C:\\Users\\Kawas\\.nuget\\packages\\",
+      "outputPath": "H:\\Discord C#\\MaraBis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Devops01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kawas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

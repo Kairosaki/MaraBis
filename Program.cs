@@ -3,4 +3,3 @@ using MaraBis;
 
 
 new DiscordInfos().RunBot().GetAwaiter().GetResult();
-

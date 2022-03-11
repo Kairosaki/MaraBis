@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace MaraBis.Modules
@@ -18,11 +19,12 @@ namespace MaraBis.Modules
         }
 
         [Command("userinfo")]
+        [Priority(1)]
         [Summary("Give information about the user")]
         [Alias("user", "whois")]
-        public async Task UserInfoAsync(SocketGuildUser user = null)
+        public async Task UserInfoAsync()
         {
-            var userInfo = user ?? Context.Message.Author;
+            var userInfo = Context.Message.Author;       
             var embedBuilder = new EmbedBuilder();
             embedBuilder.WithImageUrl(userInfo.GetAvatarUrl());
             await ReplyAsync($"Username: {userInfo.Username}#{userInfo.Discriminator}");
@@ -31,9 +33,24 @@ namespace MaraBis.Modules
             await ReplyAsync("", false, embedBuilder.Build());
         }
 
+        [Command("userinfo", RunMode = RunMode.Async)]
+        [Priority(2)]
+        [Summary("Give information about the mentionned user")]
+        [Alias("user", "whois")]
+        public async Task UserInfoAsync(SocketGuildUser user)
+        {
+            var embedBuilder = new EmbedBuilder();
+            embedBuilder.WithImageUrl(user.GetAvatarUrl());
+            await ReplyAsync($"Username: {user.Username}#{user.Discriminator}");
+            await ReplyAsync($"User Id : {user.Id}");
+            await ReplyAsync($"Avatar : ");
+            await ReplyAsync("", false, embedBuilder.Build());
+        }
+
+
         [Command("jitsi")]
         [Summary("link to Jitsi")]
-        [Alias("jitsi", "videocall")]
+        [Alias("appel", "videocall")]
         public async Task JitsiAsync()
         {
             var builder = new ComponentBuilder().WithButton("Vers jitsi", style: ButtonStyle.Link, url: "https://meet.jit.si/DevOps21Technifutur_fai9Ee");
@@ -65,3 +82,7 @@ namespace MaraBis.Modules
             Context.Guild.AddBanAsync(user);
     }
 }
+
+
+
+
