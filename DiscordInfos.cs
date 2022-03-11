@@ -12,13 +12,9 @@ namespace MaraBis
 {
     public class DiscordInfos
     {
-        private DiscordSocketClient _client;
-        private CommandService _commands;
-        private DiscordSocketConfig _config;
-
-        public DiscordSocketClient Client { get => _client; private set => _client = value; }
-        public CommandService Commands { get => _commands; set => _commands = value; }
-        public DiscordSocketConfig Config { get => _config; private set => _config = value; }
+        public DiscordSocketClient Client { get; private set; }
+        public CommandService Commands { get; set; }
+        public DiscordSocketConfig Config { get; private set; }
 
         private Task Log(LogMessage msg)
         {
@@ -28,8 +24,8 @@ namespace MaraBis
 
         public async Task InstallCommandsAsync()
         {
-            _client.MessageReceived += HandleCommandAsync;
-            await _commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(),
+            Client.MessageReceived += HandleCommandAsync;
+            await Commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(),
                                             services: null);
         }
 
@@ -41,13 +37,13 @@ namespace MaraBis
             int argPos = 0;
 
             if (!(message.HasCharPrefix('!', ref argPos) ||
-                message.HasMentionPrefix(_client.CurrentUser, ref argPos)) ||
+                message.HasMentionPrefix(Client.CurrentUser, ref argPos)) ||
                 message.Author.IsBot)
                 return;
 
-            var context = new SocketCommandContext(_client, message);
+            var context = new SocketCommandContext(Client, message);
 
-            await _commands.ExecuteAsync(
+            await Commands.ExecuteAsync(
                 context: context,
                 argPos: argPos,
                 services: null);
