@@ -20,13 +20,15 @@ namespace MaraBis.Modules
         [Command("userinfo")]
         [Summary("Give information about the user")]
         [Alias("user", "whois")]
-        public async Task UserInfoAsync(SocketUser user = null)
+        public async Task UserInfoAsync(SocketGuildUser user = null)
         {
-            var userInfo = user ?? Context.Client.CurrentUser;
+            var userInfo = user ?? Context.Message.Author;
+            var embedBuilder = new EmbedBuilder();
+            embedBuilder.WithImageUrl(userInfo.GetAvatarUrl());
             await ReplyAsync($"Username: {userInfo.Username}#{userInfo.Discriminator}");
-            await ReplyAsync($"User Id : <#{userInfo.Id}>");
+            await ReplyAsync($"User Id : {userInfo.Id}");
             await ReplyAsync($"Avatar : ");
-            await ReplyAsync($"{userInfo.AvatarId}");
+            await ReplyAsync("", false, embedBuilder.Build());
         }
 
         [Command("jitsi")]

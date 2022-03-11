@@ -39,7 +39,7 @@ namespace MaraBis
             if (!(message.HasCharPrefix('!', ref argPos) ||
                 message.HasMentionPrefix(Client.CurrentUser, ref argPos)) ||
                 message.Author.IsBot)
-                return;
+                return;            
 
             var context = new SocketCommandContext(Client, message);
 
