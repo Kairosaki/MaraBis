@@ -25,8 +25,6 @@ namespace MaraBis
     /// </summary>
     public class DiscordInfos
     {
-        //public readonly ulong _guildId = 918042511245733939;
-
         private readonly IConfiguration _config;
 
         private readonly ulong _guildId;
@@ -51,12 +49,6 @@ namespace MaraBis
 
         public async Task RunBot() 
         {
-
-/*            Config = new DiscordSocketConfig()
-            {
-                GatewayIntents = GatewayIntents.Guilds | GatewayIntents.GuildMessages | GatewayIntents.GuildMembers | GatewayIntents.GuildPresences
-            };*/
-
             using (var services = ConfigureServices())
             {
                 Client = services.GetRequiredService<DiscordSocketClient>();

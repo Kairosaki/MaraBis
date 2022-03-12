@@ -15,14 +15,9 @@ namespace MaraBis.Services
         private readonly DiscordSocketClient _client;
         private readonly InteractionService _commands;
         private readonly IServiceProvider _services;
-        //private DiscordSocketConfig _config;
 
         public CommandHandler(DiscordSocketClient client, InteractionService commands, IServiceProvider services)
         {
-            /*_config = new DiscordSocketConfig()
-            {
-                GatewayIntents = GatewayIntents.Guilds | GatewayIntents.GuildMessages | GatewayIntents.GuildMembers | GatewayIntents.GuildPresences
-            };*/
             _client = client;
             _commands = commands;
             _services = services;
