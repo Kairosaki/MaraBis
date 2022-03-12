@@ -24,13 +24,8 @@ namespace MaraBis.Modules
         [Alias("user", "whois")]
         public async Task UserInfoAsync()
         {
-            var userInfo = Context.Message.Author;       
-            var embedBuilder = new EmbedBuilder();
-            embedBuilder.WithImageUrl(userInfo.GetAvatarUrl());
-            await ReplyAsync($"Username: {userInfo.Username}#{userInfo.Discriminator}");
-            await ReplyAsync($"User Id : {userInfo.Id}");
-            await ReplyAsync($"Avatar : ");
-            await ReplyAsync("", false, embedBuilder.Build());
+            var userInfo = Context.Message.Author;
+            await Task.Run(() => UserInfo(userInfo));
         }
 
         [Command("userinfo", RunMode = RunMode.Async)]
@@ -39,14 +34,8 @@ namespace MaraBis.Modules
         [Alias("user", "whois")]
         public async Task UserInfoAsync(SocketGuildUser user)
         {
-            var embedBuilder = new EmbedBuilder();
-            embedBuilder.WithImageUrl(user.GetAvatarUrl());
-            await ReplyAsync($"Username: {user.Username}#{user.Discriminator}");
-            await ReplyAsync($"User Id : {user.Id}");
-            await ReplyAsync($"Avatar : ");
-            await ReplyAsync("", false, embedBuilder.Build());
+            await Task.Run(() => UserInfo(user));
         }
-
 
         [Command("jitsi")]
         [Summary("link to Jitsi")]
@@ -55,6 +44,16 @@ namespace MaraBis.Modules
         {
             var builder = new ComponentBuilder().WithButton("Vers jitsi", style: ButtonStyle.Link, url: "https://meet.jit.si/DevOps21Technifutur_fai9Ee");
             await ReplyAsync("Retrouvez Jitsi ici : ", components: builder.Build());
+        }
+
+        public async void UserInfo(SocketUser user)
+        {
+            var embedBuilder = new EmbedBuilder();
+            embedBuilder.WithImageUrl(user.GetAvatarUrl());
+            await ReplyAsync($"Username: {user.Username}#{user.Discriminator}");
+            await ReplyAsync($"User Id : {user.Id}");
+            await ReplyAsync($"Avatar : ");
+            await ReplyAsync("", false, embedBuilder.Build());
         }
     }
 
