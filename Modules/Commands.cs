@@ -32,9 +32,9 @@ namespace MaraBis.Modules
         [Priority(2)]
         [Summary("Give information about the mentionned user")]
         [Alias("user", "whois")]
-        public async Task UserInfoAsync(SocketGuildUser user)
+        public async Task UserInfoAsync(SocketGuildUser user, ushort size = 256)
         {
-            await Task.Run(() => UserInfo(user));
+            await Task.Run(() => UserInfo(user, size));
         }
 
         [Command("jitsi")]
@@ -46,14 +46,12 @@ namespace MaraBis.Modules
             await ReplyAsync("Retrouvez Jitsi ici : ", components: builder.Build());
         }
 
-        public async void UserInfo(SocketUser user)
+        public async void UserInfo(SocketUser user, ushort size = 512)
         {
-            var embedBuilder = new EmbedBuilder();
-            embedBuilder.WithImageUrl(user.GetAvatarUrl());
             await ReplyAsync($"Username: {user.Username}#{user.Discriminator}");
             await ReplyAsync($"User Id : {user.Id}");
             await ReplyAsync($"Avatar : ");
-            await ReplyAsync("", false, embedBuilder.Build());
+            await ReplyAsync(CDN.GetUserAvatarUrl(user.Id, user.AvatarId, size, ImageFormat.Auto));
         }
     }
 
