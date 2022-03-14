@@ -34,6 +34,8 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddHostedService<InteractionHandler>();
         services.AddHostedService<BotStatusService>();
         services.AddHostedService<LongRunningService>();
+        //services.AddHostedService<AudioService>();
+        services.AddSingleton<AudioService>();
         services.AddLavaNode(x => x.SelfDeaf = false);
     })
     .Build();

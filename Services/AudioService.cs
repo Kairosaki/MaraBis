@@ -3,17 +3,20 @@ using Victoria.EventArgs;
 using System.Collections.Concurrent;
 using Discord;
 using Victoria.Enums;
+using Discord.Addons.Hosting;
+using Discord.WebSocket;
+using Discord.Addons.Hosting.Util;
 
 namespace Marabis.Services
 {
-    public sealed class AudioService
+    public sealed class AudioService : DiscordClientService
     {
         private readonly LavaNode _lavaNode;
         private readonly ILogger _logger;
         public readonly HashSet<ulong> VoteQueue;
         private readonly ConcurrentDictionary<ulong, CancellationTokenSource> _disconnectTokens;
 
-        public AudioService(LavaNode lavaNode, ILoggerFactory loggerFactory)
+        public AudioService(DiscordSocketClient client, ILogger<AudioService> logger, LavaNode lavaNode, ILoggerFactory loggerFactory) : base(client, logger)
         {
             _lavaNode = lavaNode;
             _logger = loggerFactory.CreateLogger<LavaNode>();
@@ -79,7 +82,7 @@ namespace Marabis.Services
 
         private Task OnPlayerUpdated(PlayerUpdateEventArgs arg)
         {
-            _logger.LogInformation($"Track updated : {arg.Track.Title} : {arg.Position}");
+            //_logger.LogInformation($"Track updated : {arg.Track.Title} : {arg.Position}");
             return Task.CompletedTask;
         }
 
@@ -173,6 +176,25 @@ namespace Marabis.Services
         {
             _logger.LogCritical($"Discord WebSocket connection closed with following reason: {arg.Reason}");
             return Task.CompletedTask;
-        } 
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            
+            await Client.WaitForReadyAsync(stoppingToken);
+            Client.Ready += OnReadyAsync;
+        }
+
+        private async Task OnReadyAsync()
+        {
+            // Avoid calling ConnectAsync again if it's already connected 
+            // (It throws InvalidOperationException if it's already connected).
+            if (!_lavaNode.IsConnected)
+            {
+                _lavaNode.ConnectAsync();
+            }
+
+            // Other ready related stuff
+        }
     }
 }
