@@ -26,7 +26,7 @@ IHost host = Host.CreateDefaultBuilder(args)
     {
         config.LogLevel = LogSeverity.Info;
         config.UseCompiledLambda = true;
-    }) 
+    })
     .ConfigureServices((context, services) =>
     {
         services.AddHostedService<CommandHandler>();
