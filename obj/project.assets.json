@@ -29,7 +29,7 @@
           "lib/net6.0/Discord.Net.Commands.dll": {}
         }
       },
-      "Discord.Net.Core/3.2.0": {
+      "Discord.Net.Core/3.3.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -61,10 +61,10 @@
           "lib/net6.0/Discord.Net.Interactions.dll": {}
         }
       },
-      "Discord.Net.Rest/3.2.0": {
+      "Discord.Net.Rest/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.2.0"
+          "Discord.Net.Core": "3.3.0"
         },
         "compile": {
           "lib/net6.0/Discord.Net.Rest.dll": {}
@@ -73,11 +73,11 @@
           "lib/net6.0/Discord.Net.Rest.dll": {}
         }
       },
-      "Discord.Net.WebSocket/3.2.0": {
+      "Discord.Net.WebSocket/3.3.0": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "3.2.0",
-          "Discord.Net.Rest": "3.2.0"
+          "Discord.Net.Core": "3.3.0",
+          "Discord.Net.Rest": "3.3.0"
         },
         "compile": {
           "lib/net6.0/Discord.Net.WebSocket.dll": {}
@@ -604,7 +604,7 @@
           }
         }
       },
-      "System.Text.Json/6.0.0": {
+      "System.Text.Json/6.0.2": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
@@ -627,6 +627,20 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Victoria/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net.WebSocket": "3.3.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Text.Json": "6.0.2"
+        },
+        "compile": {
+          "lib/net6.0/Victoria.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Victoria.dll": {}
         }
       }
     }
@@ -668,14 +682,14 @@
         "lib/netstandard2.1/Discord.Net.Commands.xml"
       ]
     },
-    "Discord.Net.Core/3.2.0": {
-      "sha512": "a6/kYV15pGHK4LF1bk7Lq/zuNsOxdsUHjEt9mF1lvdHP1WkRq9uzbN+y3rJdmPdzuVgdaSHOirfCyzDPsd7pPg==",
+    "Discord.Net.Core/3.3.0": {
+      "sha512": "pt4OkL7S5kE6NKWBfkqnRobdckE8BcS6rk9/ax4+j0XtWeY/8uX0mZqjPZcdxXPlsdy/VxRchWN40IryFDiInw==",
       "type": "package",
-      "path": "discord.net.core/3.2.0",
+      "path": "discord.net.core/3.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.core.3.2.0.nupkg.sha512",
+        "discord.net.core.3.3.0.nupkg.sha512",
         "discord.net.core.nuspec",
         "lib/net461/Discord.Net.Core.dll",
         "lib/net461/Discord.Net.Core.xml",
@@ -710,14 +724,14 @@
         "lib/netstandard2.1/Discord.Net.Interactions.xml"
       ]
     },
-    "Discord.Net.Rest/3.2.0": {
-      "sha512": "U7Ycgsni4WJax0SrGxFHkg3mCsy0Q3ZfxEAiepKHPeV4f+OH8Qu8RJamxwfZf1dbA/7BCeQhv3GhfAgqIeKuiw==",
+    "Discord.Net.Rest/3.3.0": {
+      "sha512": "IQFnLDv/8oL9Pvmqj9697SPc3tJYkNxM41sMquZ0Ke6yLtTGXAR8xiirha59CmM4e8dx/FUHH6Qcbao9y+kEJQ==",
       "type": "package",
-      "path": "discord.net.rest/3.2.0",
+      "path": "discord.net.rest/3.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.rest.3.2.0.nupkg.sha512",
+        "discord.net.rest.3.3.0.nupkg.sha512",
         "discord.net.rest.nuspec",
         "lib/net461/Discord.Net.Rest.dll",
         "lib/net461/Discord.Net.Rest.xml",
@@ -731,14 +745,14 @@
         "lib/netstandard2.1/Discord.Net.Rest.xml"
       ]
     },
-    "Discord.Net.WebSocket/3.2.0": {
-      "sha512": "TSL4v6tGRGg9zg/YgwWm/IZs+v88922clMh1leZU8ByH94R4C9IsAosJcEF7ixoM27uJ0lBQgIHKTRqTuA5nlA==",
+    "Discord.Net.WebSocket/3.3.0": {
+      "sha512": "hGSLOMu0G3TUpu8TuklpuDa7h2Zpz79nIzlzVRC9YHUoNoSwR0pEwSuhEeTqvNQ45kywghZ1z10IgfZhC+cG7A==",
       "type": "package",
-      "path": "discord.net.websocket/3.2.0",
+      "path": "discord.net.websocket/3.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "discord.net.websocket.3.2.0.nupkg.sha512",
+        "discord.net.websocket.3.3.0.nupkg.sha512",
         "discord.net.websocket.nuspec",
         "lib/net461/Discord.Net.WebSocket.dll",
         "lib/net461/Discord.Net.WebSocket.xml",
@@ -1554,10 +1568,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/6.0.0": {
-      "sha512": "zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
+    "System.Text.Json/6.0.2": {
+      "sha512": "0nE2gwXLn3PTBOPwORLqwuYvWB+Beomt9ZBX+6LmogMNKUvfD1SoDb/ycB1vBntT94rGaB/SvxEyeLu14H6aEg==",
       "type": "package",
-      "path": "system.text.json/6.0.0",
+      "path": "system.text.json/6.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1603,7 +1617,7 @@
         "lib/netcoreapp3.1/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.6.0.0.nupkg.sha512",
+        "system.text.json.6.0.2.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1651,12 +1665,31 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Victoria/5.2.7": {
+      "sha512": "onAZFtxJUkxFfPVrGK+G6Q1d/vb64OtjWJKSGEfSm5JGK/ar64GYbm6El/ww/qZXP5GAMwP5MKb/2Bae8lXUVw==",
+      "type": "package",
+      "path": "victoria/5.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Logo.png",
+        "lib/net5.0/Victoria.dll",
+        "lib/net5.0/Victoria.xml",
+        "lib/net6.0/Victoria.dll",
+        "lib/net6.0/Victoria.xml",
+        "lib/netcoreapp3.1/Victoria.dll",
+        "lib/netcoreapp3.1/Victoria.xml",
+        "victoria.5.2.7.nupkg.sha512",
+        "victoria.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Discord.Addons.Hosting >= 5.1.0",
-      "Microsoft.Extensions.Hosting >= 6.0.1"
+      "Microsoft.Extensions.Hosting >= 6.0.1",
+      "Victoria >= 5.2.7"
     ]
   },
   "packageFolders": {
@@ -1666,11 +1699,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Discord C#\\Marabis\\Marabis.csproj",
+      "projectUniqueName": "H:\\Discord C#\\MaraBis\\Marabis.csproj",
       "projectName": "Marabis",
-      "projectPath": "H:\\Discord C#\\Marabis\\Marabis.csproj",
+      "projectPath": "H:\\Discord C#\\MaraBis\\Marabis.csproj",
       "packagesPath": "C:\\Users\\Kawas\\.nuget\\packages\\",
-      "outputPath": "H:\\Discord C#\\Marabis\\obj\\",
+      "outputPath": "H:\\Discord C#\\MaraBis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1685,7 +1718,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/yucked/api/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -1710,6 +1744,10 @@
           "Microsoft.Extensions.Hosting": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "Victoria": {
+            "target": "Package",
+            "version": "[5.2.7, )"
           }
         },
         "imports": [

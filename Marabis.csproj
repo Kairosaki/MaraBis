@@ -5,10 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-Marabis-DF2C9FB0-9EB5-4C6C-B072-A1134F0A01A3</UserSecretsId>
+	<RestoreAdditionalProjectSources>https://www.myget.org/F/yucked/api/v3/index.json</RestoreAdditionalProjectSources>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Discord.Addons.Hosting" Version="5.1.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Victoria" Version="5.2.7" />
   </ItemGroup>
 </Project>

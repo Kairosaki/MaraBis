@@ -1,0 +1,36 @@
+2022-03-14 09:39:26.285  INFO 13520 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.12
+	Lavaplayer      1.3.96-original
+
+2022-03-14 09:39:26.433  INFO 13520 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-DHBA6A4 with PID 13520 (H:\Discord C#\Marabis\Lavalink.jar started by Kawas in H:\Discord C#\Marabis)
+2022-03-14 09:39:26.433  INFO 13520 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-14 09:39:26.536  WARN 13520 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-14 09:39:27.749  WARN 13520 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-14 09:39:27.769  INFO 13520 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-14 09:39:27.769  INFO 13520 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1248 ms
+2022-03-14 09:39:28.063  WARN 13520 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-14 09:39:28.351  INFO 13520 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-14 09:39:28.546  INFO 13520 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2022-03-14 09:39:28.547  WARN 13520 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2022-03-14 09:39:28.702  INFO 13520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-14 09:39:28.982  INFO 13520 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-14 09:39:28.991  INFO 13520 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-14 09:39:29.065  INFO 13520 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-14 09:39:29.076  INFO 13520 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.339 seconds (JVM running for 4.218)
+2022-03-14 09:39:29.078  INFO 13520 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-14 12:13:52.509  INFO 13520 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-14 12:13:52.510  INFO 13520 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

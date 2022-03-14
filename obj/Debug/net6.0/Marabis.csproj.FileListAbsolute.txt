@@ -54,3 +54,5 @@ H:\Discord C#\Marabis\obj\Debug\net6.0\refint\Marabis.dll
 H:\Discord C#\Marabis\obj\Debug\net6.0\Marabis.pdb
 H:\Discord C#\Marabis\obj\Debug\net6.0\Marabis.genruntimeconfig.cache
 H:\Discord C#\Marabis\obj\Debug\net6.0\ref\Marabis.dll
+H:\Discord C#\MaraBis\bin\Debug\net6.0\System.Text.Json.dll
+H:\Discord C#\MaraBis\bin\Debug\net6.0\Victoria.dll
