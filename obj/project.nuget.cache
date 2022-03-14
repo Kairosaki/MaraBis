@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Y+ZePi57iOsUv2C0cMCZzEe8fRDRFk25OGA3b+OUlGKKNnRROK6g7NZXWkai4xXbFj8T1bRJBmZQ4lfz/BQDQA==",
+  "dgSpecHash": "P2ygaB2Hd4ECEB3n7AyYANA63hnrhbNeh8V182beHE4RlquFsWwBhqYKWt47p4wTgHasK0xv29XFz2edcAAwKQ==",
   "success": true,
   "projectFilePath": "H:\\Discord C#\\MaraBis\\Marabis.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kawas\\.nuget\\packages\\discord.addons.hosting\\5.1.0\\discord.addons.hosting.5.1.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.commands\\3.2.0\\discord.net.commands.3.2.0.nupkg.sha512",
-    "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.core\\3.2.0\\discord.net.core.3.2.0.nupkg.sha512",
+    "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.core\\3.3.0\\discord.net.core.3.3.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.interactions\\3.2.0\\discord.net.interactions.3.2.0.nupkg.sha512",
-    "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.rest\\3.2.0\\discord.net.rest.3.2.0.nupkg.sha512",
-    "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.websocket\\3.2.0\\discord.net.websocket.3.2.0.nupkg.sha512",
+    "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.rest\\3.3.0\\discord.net.rest.3.3.0.nupkg.sha512",
+    "C:\\Users\\Kawas\\.nuget\\packages\\discord.net.websocket\\3.3.0\\discord.net.websocket.3.3.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
@@ -44,8 +44,9 @@
     "C:\\Users\\Kawas\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Kawas\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Kawas\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\Kawas\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Users\\Kawas\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512",
+    "C:\\Users\\Kawas\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Kawas\\.nuget\\packages\\victoria\\5.2.7\\victoria.5.2.7.nupkg.sha512"
   ],
   "logs": []
 }

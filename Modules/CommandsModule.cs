@@ -1,11 +1,10 @@
 ﻿using Discord;
 using Discord.Commands;
-using Discord.WebSocket;
 using System.Diagnostics;
 
 namespace Marabis.Modules
 {
-    public class CommandsModule : ModuleBase<SocketCommandContext>
+    public sealed class CommandsModule : ModuleBase<SocketCommandContext>
     {
         private readonly ILogger<CommandsModule> _logger;
         private readonly IHost _host;
